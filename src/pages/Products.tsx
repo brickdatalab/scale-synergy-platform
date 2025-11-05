@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 const Products = () => {
   useEffect(() => {
-    document.title = "MCA Lead Products - Direct Submissions, Alpha & Apex Data | Direct MCA Leads";
+    document.title = "MCA Lead Products - Direct Submissions, Alpha & Apex Data | Lead Slaps";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute("content", "Three data tiers for every MCA team. Direct Submissions for elite teams, Alpha for growing brokers, Apex for high-volume call centers. Exclusive leads that convert.");

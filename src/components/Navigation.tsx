@@ -15,7 +15,7 @@ const Navigation = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
         <a href="/" className="font-heading text-2xl font-bold text-primary">
-          Direct MCA Leads
+          Lead Slaps
         </a>
 
         {/* Desktop Navigation */}
@@ -30,7 +30,7 @@ const Navigation = () => {
             </a>
           ))}
           <Button variant="default" size="default" asChild>
-            <a href="/contact">Request Pricing</a>
+            <a href="/products">View Products</a>
           </Button>
         </div>
 
@@ -63,8 +63,8 @@ const Navigation = () => {
               </a>
             ))}
             <Button variant="default" size="lg" asChild className="mt-4">
-              <a href="/contact" onClick={() => setMobileMenuOpen(false)}>
-                Request Pricing
+              <a href="/products" onClick={() => setMobileMenuOpen(false)}>
+                View Products
               </a>
             </Button>
           </div>

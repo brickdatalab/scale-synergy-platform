@@ -33,7 +33,7 @@ const WhyDifferent = () => {
       <div className="container mx-auto max-w-7xl px-6 lg:px-12">
         <div className="mb-16 text-center">
           <h2 className="font-heading text-4xl font-bold text-primary md:text-[40px]">
-            Why Direct MCA Leads Is Different
+            Why Lead Slaps Is Different
           </h2>
         </div>
 

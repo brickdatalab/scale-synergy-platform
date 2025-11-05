@@ -80,7 +80,7 @@ const Footer = () => {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 md:flex-row">
           <p className="font-body text-sm">
-            © 2024 Direct MCA Leads. All rights reserved.
+            © 2024 Lead Slaps. All rights reserved.
           </p>
           <div className="flex gap-4">
             <a
