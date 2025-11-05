@@ -85,6 +85,9 @@ export default {
       boxShadow: {
         'card': 'var(--shadow-card)',
         'card-hover': 'var(--shadow-card-hover)',
+        'elevation-1': '0 1px 2px rgba(0,0,0,0.06), 0 1px 1px rgba(0,0,0,0.04)',
+        'elevation-2': '0 4px 10px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.06)',
+        'elevation-3': '0 12px 24px rgba(0,0,0,0.14), 0 6px 12px rgba(0,0,0,0.10)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -108,10 +111,24 @@ export default {
             height: "0",
           },
         },
+        shimmer: {
+          "100%": { transform: "translateX(100%)" },
+        },
+        "pulse-down": {
+          "0%, 100%": { transform: "translateY(0)", opacity: "0.6" },
+          "50%": { transform: "translateY(6px)", opacity: "1" },
+        },
+        "fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        shimmer: "shimmer 1.8s ease-in-out infinite",
+        "pulse-down": "pulse-down 1.6s ease-in-out infinite",
+        "fade-in": "fade-in 250ms ease-out forwards",
       },
     },
   },

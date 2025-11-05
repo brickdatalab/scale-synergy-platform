@@ -38,7 +38,7 @@ const Products = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-3">
             {/* Direct Submissions */}
-            <div className="rounded-lg bg-card p-10 shadow-card transition-all hover:shadow-card-hover">
+            <div className="group relative rounded-xl bg-card p-10 shadow-elevation-1 transition-all duration-300 ease-out hover:shadow-elevation-3 hover:-translate-y-1 focus-within:shadow-elevation-3">
               <div className="mb-4 inline-block rounded-full bg-accent/10 px-4 py-1 text-sm font-semibold text-accent">
                 Premium Tier
               </div>
@@ -68,7 +68,7 @@ const Products = () => {
             </div>
 
             {/* Alpha Data */}
-            <div className="rounded-lg bg-card p-10 shadow-card transition-all hover:shadow-card-hover">
+            <div className="group relative rounded-xl bg-card p-10 shadow-elevation-1 transition-all duration-300 ease-out hover:shadow-elevation-3 hover:-translate-y-1 focus-within:shadow-elevation-3">
               <div className="mb-4 inline-block rounded-full bg-success/10 px-4 py-1 text-sm font-semibold text-success">
                 Growth Tier
               </div>
@@ -98,7 +98,7 @@ const Products = () => {
             </div>
 
             {/* Apex Data */}
-            <div className="rounded-lg bg-card p-10 shadow-card transition-all hover:shadow-card-hover">
+            <div className="group relative rounded-xl bg-card p-10 shadow-elevation-1 transition-all duration-300 ease-out hover:shadow-elevation-3 hover:-translate-y-1 focus-within:shadow-elevation-3">
               <div className="mb-4 inline-block rounded-full bg-primary/10 px-4 py-1 text-sm font-semibold text-primary">
                 Scale Tier
               </div>

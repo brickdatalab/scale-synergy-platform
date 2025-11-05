@@ -328,7 +328,7 @@ const AddOns = () => {
           </h2>
           <div className="grid gap-8 md:grid-cols-3">
             {/* Starter Bundle */}
-            <div className="rounded-lg bg-card p-10 shadow-card">
+            <div className="group relative rounded-xl bg-card p-10 shadow-elevation-1 transition-all duration-300 ease-out hover:shadow-elevation-3 hover:-translate-y-1 focus-within:shadow-elevation-3">
               <h3 className="mb-3 font-headline text-2xl font-semibold text-primary">
                 Acquisition Optimizer
               </h3>
@@ -349,7 +349,7 @@ const AddOns = () => {
             </div>
 
             {/* Pro Bundle - Highlighted */}
-            <div className="relative rounded-lg bg-card p-10 shadow-card-hover ring-2 ring-accent">
+            <div className="group relative rounded-xl bg-card p-10 shadow-elevation-2 ring-2 ring-accent transition-all duration-300 ease-out hover:shadow-elevation-3 hover:-translate-y-1 focus-within:shadow-elevation-3">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-accent px-4 py-1 text-xs font-semibold text-white">
                 Most Popular
               </div>
@@ -375,7 +375,7 @@ const AddOns = () => {
             </div>
 
             {/* Enterprise Bundle */}
-            <div className="rounded-lg bg-card p-10 shadow-card">
+            <div className="group relative rounded-xl bg-card p-10 shadow-elevation-1 transition-all duration-300 ease-out hover:shadow-elevation-3 hover:-translate-y-1 focus-within:shadow-elevation-3">
               <h3 className="mb-3 font-headline text-2xl font-semibold text-primary">
                 Scale & Underwrite
               </h3>
