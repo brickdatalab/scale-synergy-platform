@@ -4,10 +4,10 @@ import Footer from "@/components/Footer";
 
 const Contact = () => {
   useEffect(() => {
-    document.title = "Contact Us - Request Pricing | Direct MCA Leads";
+    document.title = "Contact Us - Request Pricing | Lead Slaps";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Get custom pricing for exclusive MCA leads. Contact Direct MCA Leads to build your data plan and scale without burn.");
+      metaDescription.setAttribute("content", "Get custom pricing for exclusive MCA leads. Contact Lead Slaps to build your data plan and scale without burn.");
     }
   }, []);
 

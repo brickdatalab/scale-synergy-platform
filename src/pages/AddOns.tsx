@@ -12,7 +12,7 @@ import {
 
 const AddOns = () => {
   useEffect(() => {
-    document.title = "AI-Powered MCA Lead Add-Ons - FundSense, StatementSnap, TrustDial | Direct MCA Leads";
+    document.title = "AI-Powered MCA Lead Add-Ons - FundSense, StatementSnap, TrustDial | Lead Slaps";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute("content", "Transform leads into winners with AI add-ons. FundSense scoring, StatementSnap underwriting, and TrustDial verification. Close faster, convert more.");
@@ -34,7 +34,7 @@ const AddOns = () => {
             Turn Every Lead Into a Winner with AI Add‑Ons Built for MCA Pros
           </h1>
           <p className="mx-auto max-w-5xl text-center font-body text-xl leading-relaxed text-text-secondary">
-            Direct MCA Leads add-ons infuse your lead flow with underwriting intelligence, data accuracy, and prioritization—so you close faster with less effort. Layer these AI-powered enhancements onto any qualifying product to reveal hidden potential, validate contact data, and deliver underwriting-ready packages that put you ahead of the competition.
+            Lead Slaps add-ons infuse your lead flow with underwriting intelligence, data accuracy, and prioritization—so you close faster with less effort. Layer these AI-powered enhancements onto any qualifying product to reveal hidden potential, validate contact data, and deliver underwriting-ready packages that put you ahead of the competition.
           </p>
         </div>
       </section>

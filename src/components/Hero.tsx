@@ -28,7 +28,7 @@ const Hero = () => {
           <div className="lg:col-span-2">
             <img
               src={heroVisual}
-              alt="Exclusive MCA leads hero — Direct MCA Leads"
+              alt="Exclusive MCA leads hero — Lead Slaps"
               className="h-auto w-full rounded-lg shadow-card"
             />
           </div>
