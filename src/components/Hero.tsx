@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroVisual from "@/assets/hero-visual.jpg";
+import heroVisual from "@/assets/hero-business-meeting.jpg";
 
 const Hero = () => {
   return (
@@ -8,10 +8,10 @@ const Hero = () => {
         <div className="grid items-center gap-12 lg:grid-cols-5">
           <div className="lg:col-span-3">
             <h1 className="mb-6 font-heading text-4xl font-bold leading-tight text-primary md:text-5xl lg:text-[56px] lg:leading-[1.1]">
-              Exclusive MCA Leads that Actually Convert — Your Scalability Partner
+              Buy MCA Leads That Actually Convert
             </h1>
             <p className="mb-8 font-body text-lg text-text-secondary md:text-xl lg:leading-relaxed">
-              Stop paying for oversold lists. We deliver <strong>exclusive merchant cash advance leads</strong>—scored by AI, verified for TCPA, and routed to your CRM in real time. We are not a lead vendor; we are a strategic data partner, and our model is simple: We only succeed when you scale.
+              Premium merchant cash advance leads for sale — live transfers, real-time submissions, and aged lists. TCPA-compliant. Exclusive or shared. Delivered to your CRM in seconds.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
               <Button variant="default" size="lg" asChild>

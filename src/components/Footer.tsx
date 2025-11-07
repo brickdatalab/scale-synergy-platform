@@ -1,4 +1,4 @@
-import { Linkedin } from "lucide-react";
+import { Linkedin, Mail, Phone } from "lucide-react";
 
 const Footer = () => {
   const footerLinks = {
@@ -22,9 +22,40 @@ const Footer = () => {
   return (
     <footer className="border-t border-border bg-text-primary py-16 text-muted">
       <div className="container mx-auto max-w-7xl px-6 lg:px-12">
-        <div className="grid gap-12 md:grid-cols-3">
+        <div className="grid gap-12 md:grid-cols-4">
+          {/* Contact Information */}
           <div>
-            <h4 className="mb-4 font-heading text-sm font-semibold uppercase tracking-wider">
+            <h4 className="mb-4 font-heading text-sm font-semibold uppercase tracking-wider text-primary-foreground">
+              Contact Us
+            </h4>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-accent" />
+                <a
+                  href="tel:+18555323362"
+                  className="font-body text-sm transition-colors hover:text-primary-foreground"
+                >
+                  (855) LEAD-MCA
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-accent" />
+                <a
+                  href="mailto:sales@leadslaps.com"
+                  className="font-body text-sm transition-colors hover:text-primary-foreground"
+                >
+                  sales@leadslaps.com
+                </a>
+              </li>
+            </ul>
+            <p className="mt-4 font-body text-xs text-text-muted">
+              Monday - Friday: 9am - 6pm EST<br />
+              Response time: Under 2 hours
+            </p>
+          </div>
+
+          <div>
+            <h4 className="mb-4 font-heading text-sm font-semibold uppercase tracking-wider text-primary-foreground">
               Company
             </h4>
             <ul className="space-y-3">
@@ -42,7 +73,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="mb-4 font-heading text-sm font-semibold uppercase tracking-wider">
+            <h4 className="mb-4 font-heading text-sm font-semibold uppercase tracking-wider text-primary-foreground">
               Solutions
             </h4>
             <ul className="space-y-3">
@@ -60,7 +91,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="mb-4 font-heading text-sm font-semibold uppercase tracking-wider">
+            <h4 className="mb-4 font-heading text-sm font-semibold uppercase tracking-wider text-primary-foreground">
               Legal
             </h4>
             <ul className="space-y-3">
@@ -80,11 +111,11 @@ const Footer = () => {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 md:flex-row">
           <p className="font-body text-sm">
-            © 2024 Lead Slaps. All rights reserved.
+            © 2025 Lead Slaps. All rights reserved.
           </p>
           <div className="flex gap-4">
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/company/leadslaps"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-colors hover:text-primary-foreground"
@@ -93,7 +124,7 @@ const Footer = () => {
               <Linkedin className="h-5 w-5" />
             </a>
             <a
-              href="https://x.com"
+              href="https://twitter.com/leadslaps"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-colors hover:text-primary-foreground"

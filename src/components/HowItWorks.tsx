@@ -1,3 +1,5 @@
+import dashboardImage from "@/assets/dashboard-analytics.jpg";
+
 const HowItWorks = () => {
   const steps = [
     {
@@ -27,13 +29,16 @@ const HowItWorks = () => {
           <h2 className="mb-4 font-heading text-4xl font-bold text-primary md:text-[40px]">
             How Our AI‑Powered MCA Lead Generation Works
           </h2>
+          <p className="mx-auto max-w-3xl font-body text-lg text-text-secondary">
+            From capture to conversion, our platform ensures every lead is qualified, compliant, and ready to close
+          </p>
         </div>
 
-        <div className="grid gap-12 md:grid-cols-3">
+        <div className="grid gap-12 md:grid-cols-3 mb-16">
           {steps.map((step) => (
             <div key={step.number} className="text-center">
-              <div className="mb-6 inline-flex h-20 w-20 items-center justify-center rounded-full bg-surface">
-                <span className="font-heading text-3xl font-bold text-primary">
+              <div className="mb-6 inline-flex h-20 w-20 items-center justify-center rounded-full bg-accent/10 border-2 border-accent">
+                <span className="font-heading text-3xl font-bold text-accent">
                   {step.number}
                 </span>
               </div>
@@ -45,6 +50,15 @@ const HowItWorks = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Dashboard Preview */}
+        <div className="mt-16 rounded-xl overflow-hidden shadow-xl">
+          <img
+            src={dashboardImage}
+            alt="Real-time MCA lead dashboard with analytics and scoring"
+            className="w-full h-auto"
+          />
         </div>
       </div>
     </section>
