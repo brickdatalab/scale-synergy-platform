@@ -1,7 +1,7 @@
 import { ArrowRight, Phone, Zap, TrendingUp } from "lucide-react";
-import constructionImage from "@/assets/construction-business.jpg";
-import retailImage from "@/assets/retail-owner.jpg";
-import contractorImage from "@/assets/contractor-business.jpg";
+import constructionImage from "@/assets/product-live-transfer.png";
+import retailImage from "@/assets/product-fresh-submissions.png";
+import contractorImage from "@/assets/product-aged-leads.png";
 
 const ProductPreview = () => {
   const products = [

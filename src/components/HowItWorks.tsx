@@ -1,4 +1,4 @@
-import dashboardImage from "@/assets/dashboard-analytics.jpg";
+import dashboardImage from "@/assets/dashboard-crm-interface.png";
 
 const HowItWorks = () => {
   const steps = [

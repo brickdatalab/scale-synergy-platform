@@ -1,5 +1,5 @@
 import { Shield, Bot, FileCheck, TrendingUp } from "lucide-react";
-import diverseBusinessImage from "@/assets/diverse-business-owners.jpg";
+import diverseBusinessImage from "@/assets/industries-diverse-businesses.png";
 
 const WhyDifferent = () => {
   const features = [
