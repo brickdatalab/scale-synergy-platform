@@ -656,7 +656,7 @@ const AddOns = () => {
           <h2 className="mb-6 font-headline text-[40px] font-bold text-primary-foreground">
             Build Your High-Performance Stack
           </h2>
-          <p className="mb-12 text-lg opacity-90">
+          <p className="mb-12 text-lg text-primary-foreground opacity-90">
             Configure your products and add-ons to see real-time pricing. Or request a custom proof-of-concept on your own data.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
