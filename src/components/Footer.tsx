@@ -1,4 +1,5 @@
 import { Linkedin, Mail, Phone } from "lucide-react";
+import logo from "@/assets/logo.svg";
 
 const Footer = () => {
   const footerLinks = {
@@ -110,9 +111,12 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 md:flex-row">
-          <p className="font-body text-sm">
-            © 2025 Lead Slaps. All rights reserved.
-          </p>
+          <div className="flex items-center gap-3">
+            <img src={logo} alt="Lead Slaps Logo" className="h-8 w-8" />
+            <p className="font-body text-sm">
+              © 2025 Lead Slaps. All rights reserved.
+            </p>
+          </div>
           <div className="flex gap-4">
             <a
               href="https://linkedin.com/company/leadslaps"

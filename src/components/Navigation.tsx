@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.svg";
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -15,8 +16,9 @@ const Navigation = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
-        <a href="/" className="font-heading text-2xl font-bold text-primary">
-          Lead Slaps
+        <a href="/" className="flex items-center gap-3">
+          <img src={logo} alt="Lead Slaps Logo" className="h-10 w-10" />
+          <span className="font-heading text-2xl font-bold text-primary">Lead Slaps</span>
         </a>
 
         {/* Desktop Navigation */}
