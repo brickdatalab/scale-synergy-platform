@@ -7,7 +7,7 @@ interface InventorySegment {
   id: string;
   productKey: ProductKey;
   productLabel: string;
-  ageBandKey: string; // e.g. "lt_15", "15_30", etc.
+  ageBandKey: string; // e.g. "lt_15", "15_30", "30_90", etc.
   ageBandLabel: string; // e.g. "< 15 days"
   priceCents: number; // per record
   availableQuantity: number;
@@ -143,10 +143,12 @@ const ProductsPage: React.FC = () => {
     const fetchInventory = async () => {
       try {
         setInventoryError(null);
+
         const res = await fetch("/api/inventory");
         if (!res.ok) {
           throw new Error("Failed to load live inventory.");
         }
+
         const data = (await res.json()) as { segments: InventorySegment[] };
 
         if (cancelled) return;
@@ -174,11 +176,11 @@ const ProductsPage: React.FC = () => {
             Math.min(1000, Math.max(100, normalized[0].availableQuantity))
           );
         }
-      } catch (err: any) {
+      } catch (err) {
         if (!cancelled) {
+          console.error("Error loading inventory", err);
           setInventoryError(
-            err?.message ||
-              "Error loading inventory. Pricing will still be accurate at checkout."
+            "Live availability is temporarily unavailable. Pricing will still be confirmed at checkout."
           );
         }
       } finally {
@@ -330,7 +332,7 @@ const ProductsPage: React.FC = () => {
 
       window.location.href = checkoutUrl;
     } catch (err: any) {
-      setCheckoutError(err.message || "Unexpected error during checkout.");
+      setCheckoutError(err?.message || "Unexpected error during checkout.");
     } finally {
       setCheckoutLoading(false);
     }
@@ -444,8 +446,8 @@ const ProductsPage: React.FC = () => {
                   Buy Verified Merchant Cash Advance Leads That Convert
                 </h1>
                 <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
-                  Stop wasting budget on recycled MCA data and oversold “full
-                  packs.” Lead Slaps gives you a clean, tiered pipeline of
+                  Stop wasting budget on recycled MCA data and oversold
+                  “full packs.” Lead Slaps gives you a clean, tiered pipeline of
                   Direct Submissions, Alpha Data, and Pulse Data—each verified,
                   age-banded, and capped so you know exactly what you&apos;re
                   buying.
@@ -1125,22 +1127,32 @@ const ProductsPage: React.FC = () => {
               Frequently Asked Questions About MCA Leads
             </h2>
             <dl className="mt-4 space-y-6">
-              {faqs.map((faq) => (
-                <div
-                  key={faq.question}
-                  className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4"
-                >
-                  <dt className="text-sm font-semibold text-slate-50">
-                    {faq.question}
-                  </dt>
-                  <dd className="mt-2 text-sm text-slate-300">
-                    <strong>{faq.answerText.split(".")[0]}.</strong>{" "}
-                    {faq.answerText.slice(
-                      faq.answerText.indexOf(".") + 1
-                    ).trim()}
-                  </dd>
-                </div>
-              ))}
+              {faqs.map((faq) => {
+                const firstPeriodIndex = faq.answerText.indexOf(".");
+                const boldPart =
+                  firstPeriodIndex === -1
+                    ? faq.answerText
+                    : faq.answerText.slice(0, firstPeriodIndex + 1);
+                const restPart =
+                  firstPeriodIndex === -1
+                    ? ""
+                    : faq.answerText.slice(firstPeriodIndex + 1).trim();
+
+                return (
+                  <div
+                    key={faq.question}
+                    className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4"
+                  >
+                    <dt className="text-sm font-semibold text-slate-50">
+                      {faq.question}
+                    </dt>
+                    <dd className="mt-2 text-sm text-slate-300">
+                      <strong>{boldPart}</strong>{" "}
+                      {restPart}
+                    </dd>
+                  </div>
+                );
+              })}
             </dl>
           </section>
 
