@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import { ProductTierCard } from "@/components/products/ProductTierCard";
 import { InventoryDashboard } from "@/components/products/InventoryDashboard";
 import { OrderConfigurator } from "@/components/products/OrderConfigurator";
@@ -13,14 +14,6 @@ const Products = () => {
   const { segments, isLoading, error, lastRefreshed, refresh } = useInventorySegments(60000); // Auto-refresh every 60s
   const [selectedProductKey, setSelectedProductKey] = useState<ProductKey | null>(null);
   const [selectedSegmentId, setSelectedSegmentId] = useState<string | null>(null);
-
-  useEffect(() => {
-    document.title = "Buy Verified Merchant Cash Advance Leads That Convert | Lead Slaps";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", "Buy verified merchant cash advance leads by tier: Direct Submissions, Alpha Data, and Pulse Data with transparent per-record pricing, live availability, and secure Square checkout.");
-    }
-  }, []);
 
   const scrollToConfigurator = () => {
     document.getElementById('order-configurator')?.scrollIntoView({ behavior: 'smooth' });
@@ -40,6 +33,11 @@ const Products = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>MCA Lead Products | Live Transfers, Fresh Submissions & Aged Leads | Lead Slaps</title>
+        <meta name="description" content="Buy MCA leads by age and product tier: Direct Submissions (premium), Alpha Data (growth), and Pulse Data (scale). Real-time inventory and transparent pricing." />
+        <link rel="canonical" href="https://leadslaps.com/products" />
+      </Helmet>
       <Navigation />
       
       {/* Hero Section */}

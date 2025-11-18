@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
@@ -17,6 +18,11 @@ import { ScrollIndicator } from "@/components/ScrollIndicator";
 const Index = () => {
   return (
     <main className="min-h-screen">
+      <Helmet>
+        <title>Buy MCA Leads | Exclusive Live Transfers & Fresh Submissions | Lead Slaps</title>
+        <meta name="description" content="Stop competing for the same leads. Buy exclusive MCA leads, live transfers, and aged data. 100% TCPA compliant and delivered to your CRM in real-time." />
+        <link rel="canonical" href="https://leadslaps.com/" />
+      </Helmet>
       <Navigation />
       <Hero />
       <ScrollIndicator />

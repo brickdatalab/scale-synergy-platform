@@ -1,7 +1,10 @@
-import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, Share2 } from "lucide-react";
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown from 'react-markdown';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 const blogMetadata: Record<string, {
   title: string;
@@ -68,6 +71,11 @@ const BlogPost = () => {
 
   if (!metadata) {
     return (
+      <>
+        <Helmet>
+          <title>Blog Post Not Found | Lead Slaps</title>
+        </Helmet>
+        <Navigation />
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-primary mb-4">Blog Post Not Found</h1>
@@ -76,10 +84,19 @@ const BlogPost = () => {
           </Link>
         </div>
       </div>
+      <Footer />
+      </>
     );
   }
 
   return (
+    <>
+      <Helmet>
+        <title>{metadata.title} | Lead Slaps Blog</title>
+        <meta name="description" content={`${metadata.title} - ${metadata.category} article published on ${metadata.date}`} />
+        <link rel="canonical" href={`https://leadslaps.com/blog/${slug}`} />
+      </Helmet>
+      <Navigation />
     <div className="min-h-screen bg-gradient-to-b from-primary/5 to-white">
       {/* Header */}
       <div className="pt-32 pb-8 px-4">
@@ -191,6 +208,8 @@ const BlogPost = () => {
         </div>
       </article>
     </div>
+    <Footer />
+    </>
   );
 };
 

@@ -1,4 +1,8 @@
-import { Link } from "react-router-dom";
+import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 
 const blogPosts = [
@@ -45,7 +49,18 @@ const blogPosts = [
 ];
 
 const Blog = () => {
+  useEffect(() => {
+    document.title = "MCA Lead Generation Blog | Expert Strategies & Industry Insights | Lead Slaps";
+  }, []);
+
   return (
+    <>
+      <Helmet>
+        <title>MCA Lead Generation Blog | Expert Strategies & Industry Insights | Lead Slaps</title>
+        <meta name="description" content="Learn proven merchant cash advance lead generation strategies, sales best practices, and industry trends from the Lead Slaps blog." />
+        <link rel="canonical" href="https://leadslaps.com/blog" />
+      </Helmet>
+      <Navigation />
     <div className="min-h-screen bg-gradient-to-b from-primary/5 to-white">
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4">
@@ -75,6 +90,7 @@ const Blog = () => {
                     src={post.image}
                     alt={post.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -130,7 +146,9 @@ const Blog = () => {
           </Link>
         </div>
       </section>
+      <Footer />
     </div>
+    </>
   );
 };
 
