@@ -58,6 +58,7 @@ const HowItWorks = () => {
             src={dashboardImage}
             alt="Real-time MCA lead dashboard with analytics and scoring"
             className="w-full h-auto"
+            loading="lazy"
           />
         </div>
       </div>

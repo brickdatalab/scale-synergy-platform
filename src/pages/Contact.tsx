@@ -1,18 +1,17 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const Contact = () => {
-  useEffect(() => {
-    document.title = "Contact Us - Request Pricing | Lead Slaps";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", "Get custom pricing for exclusive MCA leads. Contact Lead Slaps to build your data plan and scale without burn.");
-    }
-  }, []);
-
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>Contact Lead Slaps | Request MCA Lead Pricing & Volume Info</title>
+        <meta name="description" content="Get custom pricing for live transfer MCA leads, fresh submissions, and aged data. Fill out the form or call +1-855-532-3622 to speak with our sales team." />
+        <link rel="canonical" href="https://leadslaps.com/contact" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Navigation />
       
       <section className="bg-background px-6 py-24 lg:px-12">
@@ -161,7 +160,8 @@ const Contact = () => {
       </section>
 
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 
